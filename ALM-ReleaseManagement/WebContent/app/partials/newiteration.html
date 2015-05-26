@@ -1,0 +1,86 @@
+<!-- container-editIteration Start-->
+  <style>
+	input.ng-dirty.ng-valid {
+		border-color: green;
+	}
+	
+	input.ng-dirty.ng-invalid {
+		border-color: red;
+	}
+</style>
+  <script>
+  $(function() {
+	events();
+  });
+  
+  </script>
+ 
+ <h3>New Iteration</h3>
+<div class="container-newIteration">
+
+<form id="iterationForm" method="get" action="/ALM-ReleaseManagement/releasemanagement/newiterationsubmit" ng-app="" name="signup_form"  ng-controller="personController" novalidate>
+
+<!--title-->
+
+<input type="text" id="IterationTitle" class="form-control" name="IterationTitle" ng-model="IterationTitle" placeholder="Title" ng-minlength=5 ng-maxlength=20 ng-pattern="myRegex" required/>
+<abbr title="Field Required!!! Must start with a letter, and contain letters & numbers only. Must have 5 to 20 characters."><span class="glyphicon glyphicon-info-sign"></span></abbr>
+		
+	<div class="error-container" ng-show="signup_form.IterationTitle.$dirty && signup_form.IterationTitle.$invalid">
+		<small class="error" ng-show="signup_form.IterationTitle.$error.required">Please input a title</small>
+		<small class="error" ng-show="signup_form.IterationTitle.$error.minlength">Your title is required to be at least 5 characters</small>
+		<small class="error" ng-show="signup_form.IterationTitle.$error.maxlength">Your title cannot be longer than 20 characters</small>
+		<small class="error" ng-show="signup_form.IterationTitle.$error.pattern">Field Required!!! Must start with a letter, and contain letters & numbers only. No Space Allowed </small>
+    </div>
+	
+<!--description-->
+
+<input type="text" id="IterationDescription" class="form-control" name="IterationDescription" ng-model="IterationDescription" maxlength="100" ng-minlength=20 ng-maxlength=100 placeholder="Description" required/>
+<abbr title="Field Required!!! Must start with a letter, and contain letters & numbers only. Must have 20 to 100 characters."><span class="glyphicon glyphicon-info-sign"></span></abbr>
+	<div class="error-container" ng-show="signup_form.IterationDescription.$dirty && signup_form.IterationDescription.$invalid">
+		<small class="error" ng-show="signup_form.IterationDescription.$error.required">Please fill up the descrition fieled.</small>
+		<small class="error" ng-show="signup_form.IterationDescription.$error.minlength">Your description is required to be at least 20 characters.</small>
+		<small class="error" ng-show="signup_form.IterationDescription.$error.maxlength">Your description cannot be longer than 100 characters.</small>
+	</div>
+	<input type="text" class="form-control" id="IterationStartDate" name="IterationStartDate" ng-model="IterationStartDate" placeholder="Start Date"  >
+	<input type="text" class="form-control" id="IterationEndDate" name="IterationEndDate" ng-model="IterationEndDate" placeholder="End Date"  >
+	<select name="IterationStatus" id="IterationStatus" class=" btn btn-default form-control" ng-model="IterationStatus" >
+		<option value="" default selected>Status</option>
+		<option>Planned</option>
+		<option>Working</option>
+		<option>Completed</option>
+	</select>
+	
+<!--items-->
+	<input type="text" id="IterationItems" class="form-control" ng-model="IterationItems" name="IterationItems" placeholder="Items" ng-pattern="myRegex12" required/>
+	<abbr title="Field Required!!! Must start with a letter, and contain letters & numbers only."><span class="glyphicon glyphicon-info-sign"></span></abbr>
+	<div class="error-container" ng-show="signup_form.items.$dirty && signup_form.items.$invalid">
+		<small class="error" ng-show="signup_form.items.$error.required">Please fill up the items fieled.</small>
+		<small class="error" ng-show="signup_form.items.$error.pattern">Field Required!!! Must start with a letter, and contain letters & numbers only. </small>
+	</div>
+	
+	<select name="IterationType" id="IterationType" class=" btn btn-default form-control" ng-model="IterationType">
+		<option value="" default selected>Type</option>
+		<option>MileStone</option>
+		<option>Build</option>
+		<option>Major</option>
+		<option>Minor</option>
+		<option>Final</option>
+	</select><br>
+<button type="reset" class="btn-warning">
+<span class="glyphicon glyphicon-repeat"></span> Reset
+</button> 
+
+<button id="btnSignUp" type="submit" class="btn-success" >
+<span class="glyphicon glyphicon-ok"></span> Submit
+</button>
+</form>
+
+</div><!-- container-editIteration END-->	
+
+<script>
+function personController($scope) {
+ 	$scope.myRegex = /^[A-Za-z][A-Za-z0-9]*[A-Za-z0-9]$/;
+  	$scope.myRegex12 =  /^[a-zA-Z][0-9a-zA-Z]+$/;
+
+}
+</script>

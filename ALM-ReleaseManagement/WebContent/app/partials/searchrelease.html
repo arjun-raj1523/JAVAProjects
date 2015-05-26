@@ -1,0 +1,146 @@
+  <script>
+  $(function() {
+    $( "#ReleaseStartDate" ).datepicker();
+    $( "#ReleasePlannedDate" ).datepicker();
+    $( "#ReleaseReleaseDate" ).datepicker();
+  });
+  </script>
+  <div id="controllerdiv" ng-controller="getReleaseData">
+<!-- container-searchrelease Start-->
+	<div class="container-searchrelease">
+
+    <h3>Search Release</h3>
+
+	<input ng-model="searchTextRelease"  class="form-control" placeholder="Search">
+    <table class="table table-striped table-condensed">
+      <tr>
+        <th>Index</th><th>Title</th><th>Description</th><th>StartDate</th><th>PlannedDate</th><th>ReleaseDate</th><th>Type</th><th>To</th><th>Items</th><th>Status</th><th>Manager</th><th>Version</th><th>Action</th>
+      </tr>
+      <tr ng-repeat="x in jsonobj1 | filter:searchTextRelease">
+		
+        <td>{{x.index }}</td>
+        <th>{{x.Title }}</th>
+		<td>{{x.Discription }}</td>
+		<td>{{x.StartDate }}</td>
+		<td>{{x.PlannedDate }}</td>
+		<td>{{x.ReleaseDate }}</td>
+		<td>{{x.Type }}</td>
+		<td>{{x.To }}</td>
+		<td>{{x.Items }}</td>
+		<td>{{x.Status }}</td>
+        <td>{{x.Manager }}</td>
+		<td>{{x.Version}}</td>
+		<td ng-click=editrelease(x.index)><button type="button" class="btn btn-info">
+		<span class="glyphicon glyphicon-pencil"></span> Edit
+		</button>
+		</td>
+      </tr>
+    </table><br>
+</div><!-- container-searchrelease END-->
+
+<!--Edit release  -->
+
+  <style>
+	input.ng-dirty.ng-valid {
+		border-color: green;
+	}
+	
+	input.ng-dirty.ng-invalid {
+		border-color: red;
+	}
+</style>
+
+
+  
+  
+
+<div class="container-editrelease">
+  <script>
+  $(function() {
+	events();
+  });
+  </script>
+ <h3>Edit Release</h3>	
+<form id="releaseForm"  method="get" action="/ALM-ReleaseManagement/releasemanagement/editreleasesubmit" ng-app="" name="signup_form"  ng-controller="personController" novalidate>
+	<!--validation-->
+	
+	<!--title-->
+	<input type="text" id="index" name="index" ng-model="index"/>
+ <script>
+$("#index").hide();
+</script> 
+		<input type="text" class="form-control" name="ReleaseTitle" ng-model="ReleaseTitle" placeholder="Title" ng-minlength=5 ng-maxlength=20 ng-pattern="myRegex" required/>
+		<abbr title="Field Required!!! Must start with a letter, and contain letters & numbers only. Must have 5 to 20 characters."><span class="glyphicon glyphicon-info-sign"></span></abbr>
+		
+	<div class="error-container" ng-show="signup_form.ReleaseTitle.$dirty && signup_form.ReleaseTitle.$invalid">
+		<small class="error" ng-show="signup_form.ReleaseTitle.$error.required">Please input a title</small>
+		<small class="error" ng-show="signup_form.ReleaseTitle.$error.minlength">Your title is required to be at least 5 characters</small>
+		<small class="error" ng-show="signup_form.ReleaseTitle.$error.maxlength">Your title cannot be longer than 20 characters</small>
+		<small class="error" ng-show="signup_form.ReleaseTitle.$error.pattern">Field Required!!! Must start with a letter, and contain letters & numbers only. No Space Allowed </small>
+    </div>
+    
+	<!--description-->
+		<input type="text" class="form-control" name="ReleaseDescription" ng-model="ReleaseDescription" ng-minlength=20 ng-maxlength=100 placeholder="Description"  required>
+		<abbr title="Field Required!!! Must start with a letter, and contain letters & numbers only. Must have 20 to 100 characters."><span class="glyphicon glyphicon-info-sign"></span></abbr>
+	<div class="error-container" ng-show="signup_form.ReleaseDescription.$dirty && signup_form.ReleaseDescription.$invalid">
+		<small class="error" ng-show="signup_form.ReleaseDescription.$error.required">Please fill up the descrition fieled.</small>
+		<small class="error" ng-show="signup_form.ReleaseDescription.$error.minlength">Your description is required to be at least 20 characters.</small>
+		<small class="error" ng-show="signup_form.ReleaseDescription.$error.maxlength">Your description cannot be longer than 100 characters.</small>
+	</div>
+		
+		
+	<input type="text" class="form-control" id="ReleaseStartDate" name="ReleaseStartDate" ng-model="ReleaseStartDate" placeholder="Start Date"  >
+	<input type="text" class="form-control" id="ReleasePlannedDate" name="ReleasePlannedDate"  ng-model="ReleasePlannedDate" placeholder="Planned Date"  >
+	<input type="text" class="form-control" id="ReleaseReleaseDate" name="ReleaseReleaseDate"  ng-model="ReleaseReleaseDate" placeholder="Release Date"  >
+	
+	<select name="ReleaseType" class=" btn btn-default form-control" ng-model="ReleaseType">
+		<option value="" default selected>Type</option>
+		<option>MileStone</option>
+		<option>Build</option>
+		<option>Major</option>
+		<option>Minor</option>
+		<option>Final</option>
+	</select><br>
+	
+	<select name="ReleaseTo" class=" btn btn-default form-control" ng-model="ReleaseTo">
+		<option value="" default selected>To</option>
+		<option>Dev Test</option>
+		<option>QA Test</option>
+		<option>Stage</option>
+		<option>Production</option>
+		
+	</select>
+	
+	<!--items-->
+	<input type="text" class="form-control" name="ReleaseItems" ng-model="ReleaseItems" placeholder="Items" ng-pattern="myRegex12" required>
+	<abbr title="Field Required!!! Must start with a letter, and contain letters & numbers only."><span class="glyphicon glyphicon-info-sign"></span></abbr>
+	<div class="error-container" ng-show="signup_form.ReleaseItems.$dirty && signup_form.ReleaseItems.$invalid">
+		<small class="error" ng-show="signup_form.ReleaseItems.$error.required">Please fill up the items fieled.</small>
+		<small class="error" ng-show="signup_form.ReleaseItems.$error.pattern">Field Required!!! Must start with a letter, and contain letters & numbers only. </small>
+	</div>
+	
+	<select name="ReleaseStatus" class=" btn btn-default form-control" ng-model="ReleaseStatus">
+		<option value="" default selected>Status</option>
+		<option>Planned</option>
+		<option>Working</option>
+		<option>Completed</option>
+	</select><br>
+	<select name="ReleaseManager"  class=" btn btn-default form-control" ng-model="ReleaseManager">	
+		<option value="" default selected>Manager</option>	
+		<option>Dev PM</option>
+		<option>Release Manager</option>
+	</select>
+	<input type="text" class="form-control" name="ReleaseVersion" ng-model="ReleaseVersion" placeholder="Version" maxlength="25" ><br>	
+	<button type="submit" class="btn-success" onclick="alphanumeric()">
+	<span class="glyphicon glyphicon-ok"></span> Submit
+	</button>
+</form>
+</div><!-- container-newRelease END---->
+
+
+<script>
+function personController($scope) {
+ $scope.myRegex = /^[A-Za-z][A-Za-z0-9]*[A-Za-z0-9]$/;
+  $scope.myRegex12 =  /^[a-zA-Z][0-9a-zA-Z]+$/;
+}
+</script>

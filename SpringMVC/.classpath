@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0 (6)">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/asm-debug-all-3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/commons-logging.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.aop-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.asm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.aspects-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.beans-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.context.support-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.context-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.core-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.expression-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.instrument.tomcat-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.instrument-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.jdbc-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.jms-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.orm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.oxm-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.test-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.transaction-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.web.portlet-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.web.servlet-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.web.struts-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/arjunr/Documents/Assignments/libs/Springlib3_core_web_mvc_orm_etc/org.springframework.web-3.0.0.RELEASE.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

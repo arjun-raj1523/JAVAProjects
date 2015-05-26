@@ -1,0 +1,137 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:700);
+body{
+	
+		background-color:#BDDBEB;
+	background-size: cover;	
+	padding: 40px 15px;
+	text-align: center;
+	padding-top: 10%;
+	font-family: 'Exo', sans-serif;
+}
+.panel{
+			background-color:grey;
+			opacity:0.9;
+			width:30%;
+			height:30%;
+			margin-left:35%;
+}
+
+.search input[type=password]{
+				width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10%;
+}
+.searchentry{
+	margin-top:10px;
+}
+.search input[type=button]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.searchresult{
+	background-color:#A8B0BA;
+	font-size: 16px;
+	font-weight: 400;
+	width:50%;
+	margin-left:25%;
+	height: auto;
+	
+}
+#showbutton{
+
+		margin-top:10px;
+		margin-right: 4%;
+}
+fieldset{
+		
+		
+		background-color:#BDDBEB;
+		width:30%;
+		height:30%;
+		margin-left:33%;
+		
+}
+
+legend{
+		color:#1869F3;
+}
+#Welcome{
+		color:#1869F3;
+}
+input{
+			color:black;
+			
+}
+.welcomeText{
+			color:black;
+}
+
+
+.btn{
+			margin-top:10px;
+			margin-bottom:10px;
+			margin-right: 15px;
+			font-size: 17px;
+}
+
+.btn.btn-primary{
+			background-color:#14CD64;
+
+}
+.btn.btn-success{
+			background-color:#006FFF;
+			margin-right:20px;
+}
+
+.searchResult{
+			color:black;
+}
+
+.label{
+			margin-right: 20px;
+			font-size: 11px;
+}
+
+.label.label-danger{
+			background-color: #D9534F;
+			margin-left: 1%;
+			margin-top: 15%;			
+			position: absolute;
+			top: calc(50% - 75px);
+			left: calc(50% - 50px);
+			padding: 10px;
+			z-index: 2;
+}
+
+.table{
+			background-color:white;
+			margin-left:25%;
+			padding-left:35%;
+			margin-top:10%;
+			width:50%;
+			
+}
+
+.navbar{
+font-size: 17px;
+
+}

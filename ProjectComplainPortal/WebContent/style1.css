@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+body{
+	font-family: 'Exo', sans-serif;
+}
+#body {
+	margin-top: 20%;
+	text-align:center;
+	
+	
+}
+.navbar-inverse .navbar-brand {
+    color: #FFF;
+	
+}
+.navbar-inverse
+{
+background-color: black;
+font-size: 85%;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: rgba(255, 255, 255, 1);
+}
+
+.label-danger {
+    background-color: #D9534F;   
+    font-size: 90%;
+}
+.label-success {
+    
+   
+    font-size: 90%;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 65%;
+}
+.nav.navbar-nav{
+	margin-left: 7%;
+}
+
+.showCustomer {
+    width: 30%;
+    margin-left: 35%;
+    background-color: rgba(194, 194, 194, 0.72);
+    font-size: 100%;
+}
+
+.table,th {
+    background-color: rgba(249, 249, 249, 1);
+    text-align:center;
+    width: 60%;
+	max-width: 100%;
+	margin-bottom: 20px;
+	margin-top: 10%;
+	margin-left: 20%;
+}
+
+.form-control {
+    display: inline;
+    width:30%;
+}
+.progress{
+	
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 1%;
+}

@@ -1,0 +1,45 @@
+.menu-container {
+				z-index:100;
+				margin-left: -80px;
+				position: fixed;
+				width: 80px;
+				background-color: #000;
+				color: #fff;
+				display: block;
+				height: 100%;
+			}
+			.menu-container-outer {
+				position: relative;
+				
+			}
+			.menu-icon {
+				font-size: 40px;
+			}
+			.menu-container-inner {
+				position: relative;
+				width: 80px;
+				height: 100%;
+			}
+			.menu-item {
+				padding: 10px;
+				text-align: center;
+				margin-bottom: 5px;
+			}
+			.menu-item:hover {
+				background-color: #333;
+				cursor: pointer;
+			}
+			#menu-text {
+				z-index:99;
+				background-color: #000;
+				font-size:100%;
+				color: #fff;
+				position: relative;
+				left: 20px;
+				border-radius: 22px;
+				margin-top: 1px;
+				padding: 10px;
+				padding-left: 62px;
+				padding-right: 5px;
+				cursor: pointer;
+			}

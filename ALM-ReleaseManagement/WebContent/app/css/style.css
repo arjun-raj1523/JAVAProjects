@@ -1,0 +1,66 @@
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+.container-body {
+	padding:1px;
+	text-align: center;
+  	font-family: arial;
+	text-align: center;
+}
+body{
+	background-color: rgba(249, 243, 224, 1);
+	font-family: 'Josefin Sans', sans-serif;
+}
+button {
+	width: auto;
+	display: block;
+	padding: 8px 16px;
+	border-radius: 7px;
+	border: 1px solid;
+	cursor: pointer;
+	margin: 7px auto 7px auto;
+}
+
+form {
+	margin-top: 5%;
+}
+.table{
+	margin: 50px 10px 20px 10px;
+	background-color: rgba(53, 134, 79, 0.16);
+}
+th,td{
+	text-align:center;
+}
+p {
+	display: inline-block;
+}
+
+.form-control {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+.btn-warning {
+    margin-left: 45%;
+}
+.btn-default.form-control{
+    margin-right:35%;
+}
+
+small{
+	margin-left: 305px;
+	color:red;
+	font-family:Arial;
+}
+
+abbr[title], abbr[data-original-title] {
+    margin-left: 50%;
+    
+}
+h3{
+    margin-left: 42%;
+    font-family: 'Josefin Sans', sans-serif;
+    }
+
+select option[default] {
+    color: #333;
+}    
